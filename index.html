@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Loan Calculator</title>
 </head>
+
 <body>
-    
+    <div class="card">
+        <div id="calculator">
+            <h1>Loan Calculator</h1>
+            <form action="">
+                <div class="input-group">
+                    <label class="sr-only" for="loan-amount">Loan Amount</label>
+                    <div class="span-div">
+                        <span>$</span>
+                    </div>
+                    <input type="number" id="loan-amount" name="loan-amount" placeholder="Loan Amount">
+                </div>
+                <div class="input-group">
+                    <label class="sr-only" for="interest">Annual interest</label>
+                    <div class="span-div">
+                        <span>%</span>
+                    </div>
+                    <input type="number" id="interest" name="loan-amount" placeholder="Annual Interest">
+                </div>
+                <div class="input-group">
+                    <label class="sr-only" for="repayment">Repayment years</label>
+                    <input type="number" id="repayment" name="loan-amount" placeholder="Repayment years">
+                </div>
+                <input type="submit" class="button b-dark" value="Calculate">
+            </form>
+        </div>
+        <div id="results">
+            <h2>Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monthly Payment</td>
+                        <td>$425.40</td>
+                    </tr>
+                    <tr>
+                        <td>Total Payment</td>
+                        <td>$10209.66</td>
+                    </tr>
+                    <tr>
+                        <td>Total Interest</td>
+                        <td>$209.66</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <script src="./app.js"></script>
 </body>
+
 </html>
